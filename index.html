@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Ферма «Золотой луг» | Племенной скот и птица</title>
+  <meta name="description" content="Племенные коровы, телята, свиньи, поросята, куры, цыплята, утки, гуси, индейки, перепела напрямую с фермы. Ветеринарный контроль, доставка по всей стране.">
+  <meta name="keywords" content="купить корову, телята, поросята, свиньи, цыплята, утки, гуси, перепела, индейки, фермерское хозяйство, племенной скот, живая птица, доставка скота">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #ffffff; color: #1e2f2c; line-height: 1.5; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    h1, h2, h3 { font-weight: 600; }
+    h2 { font-size: 2.2rem; margin-bottom: 1.5rem; color: #1e3b2f; position: relative; display: inline-block; }
+    h2:after { content: ''; display: block; width: 60px; height: 4px; background: #d4af37; margin-top: 8px; border-radius: 2px; }
+    .btn { display: inline-block; padding: 12px 28px; border-radius: 40px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.3s ease; cursor: pointer; border: none; text-align: center; }
+    .btn-gold { background: #d4af37; color: #1e3b2f; box-shadow: 0 8px 20px rgba(212,175,55,0.3); }
+    .btn-gold:hover { background: #c9a52c; transform: translateY(-2px); }
+    .btn-outline { background: transparent; border: 2px solid #1e3b2f; color: #1e3b2f; padding: 10px 20px; border-radius: 30px; font-weight: bold; cursor: pointer; }
+    .btn-outline:hover { background: #1e3b2f; color: white; }
+    .btn-light { background: white; color: #1e3b2f; border: 2px solid white; }
+    .btn-light:hover { background: transparent; color: white; }
+    .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.bing.com/images/search?view=detailV2&ccid=sdh8D%2b6k&id=DFB91DD24FA3A34A9327E0C700AECF1FF47D74F0&thid=OIP.sdh8D-6kjwLG3swatgc6FQHaFj&mediaurl=https%3a%2f%2fwww.agrobase.ru%2fuploads%2fpages%2frastenievodstvo%2fselhozkulturi%2fpshenicza-zoloto-polej.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.b1d87c0feea48f02c6decc1ab6073a15%3frik%3d8HR99B%252fPrgDH4A%26pid%3dImgRaw%26r%3d0&exph=600&expw=800&q=%d0%bf%d1%88%d0%b5%d0%bd%d0%be+%d0%b7%d0%be%d0%bb%d0%be%d1%82%d0%be%d0%b5+%d1%80%d0%be%d1%81%d1%82%d0%be%d0%ba&FORM=IRPRST&ck=136CA7DB6C9B49162ECB69357FB23BB6&selectedIndex=7&itb=0'); background-size: cover; background-position: center; min-height: 90vh; display: flex; align-items: center; color: white; position: relative; }
+    .hero-content { max-width: 700px; }
+    .hero h1 { font-size: 3.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+    .hero p { font-size: 1.3rem; margin-bottom: 2.5rem; }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; position: absolute; top: 0; width: 100%; z-index: 10; }
+    .logo { font-size: 1.8rem; font-weight: 700; color: white; text-decoration: none; }
+    .logo span { color: #d4af37; }
+    .nav-links { display: flex; gap: 28px; flex-wrap: wrap; }
+    .nav-links a { color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 500; }
+    .nav-links a:hover { color: #d4af37; }
+    section { padding: 80px 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .about-image img { width: 100%; border-radius: 24px; }
+    .stats { display: flex; gap: 24px; margin: 28px 0; flex-wrap: wrap; }
+    .stat { background: #f9f7f2; padding: 16px 20px; border-radius: 16px; text-align: center; }
+    .stat-number { font-size: 2rem; font-weight: 700; color: #1e3b2f; }
+    .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 28px; }
+    .animal-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 24px rgba(0,0,0,0.06); transition: transform 0.3s; border: 1px solid #f0ede5; }
+    .animal-card:hover { transform: translateY(-6px); }
+    .card-img img { width: 100%; height: 200px; object-fit: cover; }
+    .card-info { padding: 20px; }
+    .specs { display: flex; flex-wrap: wrap; gap: 8px; font-size: 0.9rem; color: #4b5b52; margin: 10px 0; }
+    .price { font-size: 1.6rem; font-weight: 700; color: #1e3b2f; margin: 12px 0; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; margin-top: 30px; }
+    .feature-item { background: #faf9f5; padding: 24px; border-radius: 20px; text-align: center; }
+    .feature-icon { font-size: 2.3rem; margin-bottom: 12px; }
+    .steps { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
+    .step { flex: 1 1 180px; background: #f5f2e8; border-radius: 20px; padding: 25px 15px; text-align: center; }
+    .step-number { background: #d4af37; color: #1e3b2f; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 12px; }
+    .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .review-card { background: white; padding: 24px; border-radius: 20px; box-shadow: 0 8px 18px rgba(0,0,0,0.04); }
+    .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .contact-details a { display: block; margin: 8px 0; color: #1e3b2f; font-weight: 500; }
+    .map-img { width: 100%; border-radius: 20px; height: 250px; object-fit: cover; }
+    form input, form textarea { width: 100%; padding: 14px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 14px; font-family: inherit; }
+    footer { background: #1e3b2f; color: #e5dfd0; padding: 30px 0; text-align: center; }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+      .navbar { flex-direction: column; gap: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="container" style="width:100%;">
+      <div class="navbar">
+        <a href="#" class="logo">🌾 Золотой<span>Луг</span></a>
+        <div class="nav-links">
+          <a href="#about">О ферме</a>
+          <a href="#catalog">Каталог</a>
+          <a href="#advantages">Преимущества</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#contact">Контакты</a>
+        </div>
+      </div>
+      <div class="hero-content">
+        <h1>Племенной скот и домашняя птица напрямую от фермы</h1>
+        <p>Здоровые животные, ветеринарный контроль, доставка по всей стране.</p>
+        <div class="hero-buttons">
+          <a href="#catalog" class="btn btn-gold">Посмотреть каталог</a>
+          <a href="#contact" class="btn btn-light">Связаться с нами</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="container">
+      <h2>О ферме</h2>
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="https://www.bing.com/images/search?view=detailV2&ccid=fs91NJY3&id=8B960AE97F19A9BF207F2CDC70DA9FAE31B932A3&thid=OIP.fs91NJY3je6JLs8-rFJlxwHaGj&mediaurl=https%3a%2f%2fstatic.tildacdn.com%2ftild6137-6335-4433-b736-363330323639%2f_____.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.7ecf753496378dee892ecf3eac5265c7%3frik%3dozK5Ma6f2nDcLA%26pid%3dImgRaw%26r%3d0&exph=1451&expw=1641&q=%d0%ba%d0%b0%d1%80%d1%82%d0%b0+%d1%84%d0%ba%d1%80%d0%bc%d1%8b&FORM=IRPRST&ck=9F6235E70D369A23FF545D3D8B210C16&selectedIndex=2&itb=1" alt="Ферма Золотой луг" loading="lazy">
+        </div>
+        <div>
+          <p style="font-size:1.1rem; margin-bottom:20px;">Семейное хозяйство «Золотой луг» работает с 2008 года. 350 гектаров, 1200+ голов КРС, 800 свиней, 5000+ птицы ежегодно.</p>
+          <div class="stats">
+            <div class="stat"><span class="stat-number">16</span><br>лет опыта</div>
+            <div class="stat"><span class="stat-number">350</span><br>гектаров</div>
+            <div class="stat"><span class="stat-number">2000+</span><br>голов скота</div>
+          </div>
+          <p>✔ Ветеринарное сопровождение 24/7<br>✔ Собственная кормовая база<br>✔ Племенные свидетельства</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog" style="background:#fdfcf9;">
+    <div class="container">
+      <h2>Каталог животных</h2>
+      <p style="color:#6b7c6f; margin-bottom:30px;">🔄 В наличии: коровы, телята, свиньи, куры, цыплята, утки, гуси, индейки, перепела</p>
+      <div class="catalog-grid" id="catalogGrid">
+        <!-- КОРОВЫ -->
+        <div class="animal-card">
+          <div class="card-img"><img src="https://www.bing.com/images/search?view=detailV2&ccid=7jRKztHU&id=A87E97DDC1C05A9855E72F5561BF461316BF078E&thid=OIP.7jRKztHU0Y51Qs_gvDqiQwHaE8&mediaurl=https%3a%2f%2fimages7.alphacoders.com%2f650%2f650144.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.ee344aced1d4d18e7542cfe0bc3aa243%3frik%3djge%252fFhNGv2FVLw%26pid%3dImgRaw%26r%3d0&exph=2000&expw=3000&q=%d0%9a%d0%be%d1%80%d0%be%d0%b2%d0%b0+4%d0%ba&FORM=IRPRST&ck=6496099E6F01BE240D79D2625EA75B88&selectedIndex=5&itb=0" alt="Корова"></div>
+          <div class="card-info"><h3>Корова Голштинская</h3><div class="specs"><span>🐄 Голштин</span><span>📅 3 года</span><span>⚖️ 620 кг</span></div><div class="price">185 000 ₽</div><button class="btn-outline" onclick="sendOrder('Корова Голштинская')">Оставить заявку</button></div>
+        </div>
+        <!-- ТЕЛЯТА -->
+        <div class="animal-card">
+          <div class="card-img"><img src="https://www.bing.com/images/search?view=detailV2&ccid=hLO2yAgO&id=5143707A2D661DF168309C851B751CB9C4D426F7&thid=OIP.hLO2yAgO-A4ebaL-LADJmAHaEj&mediaurl=https%3a%2f%2f99px.ru%2fsstorage%2f53%2f2016%2f05%2ftmb_167145_8273.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.84b3b6c8080ef80e1e6da2fe2c00c998%3frik%3d9ybUxLkcdRuFnA%26pid%3dImgRaw%26r%3d0&exph=615&expw=1000&q=%d0%a2%d0%b5%d0%bb%d0%b5%d0%bd%d0%be%d0%ba+4%d0%ba&FORM=IRPRST&ck=F74FBEA9EF6397BF73ABA1CAA28D3B0E&selectedIndex=3&itb=0" alt="Теленок"></div>
+          <div class="card-info"><h3>Теленок Абердин</h3><div class="specs"><span>🐄 Абердин-ангус</span><span>📅 5 мес</span><span>⚖️ 180 кг</span></div><div class="price">72 000 ₽</div><button class="btn-outline" onclick="sendOrder('Теленок Абердин')">Оставить заявку</button></div>
+        </div>
+        <!-- СВИНЬИ -->
+        <div class="animal-card">
+          <div class="card-img"><img src="https://www.bing.com/images/search?view=detailV2&ccid=rGi5pADF&id=78F594F2F51E54F6D4DE14230EB494D39D592B65&thid=OIP.rGi5pADFvivlW81E-sNaDwHaEH&mediaurl=https%3a%2f%2fvseoferme.com%2fwp-content%2fuploads%2f2019%2f03%2fsvini-porody-landras4.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.ac68b9a400c5be2be55bcd44fac35a0f%3frik%3dZStZndOUtA4jFA%26pid%3dImgRaw%26r%3d0&exph=569&expw=1024&q=%d0%a1%d0%b2%d0%b8%d0%bd%d1%8c%d1%8f+%d0%9b%d0%b0%d0%bd%d0%b4%d1%80%d0%b0%d1%81+&FORM=IRPRST&ck=713D6FD64D14979F5156416A4FC04DB1&selectedIndex=2&itb=0" alt="Свинья"></div>
+          <div class="card-info"><h3>Свинья Ландрас</h3><div class="specs"><span>🐖 Ландрас</span><span>📅 1.5 года</span><span>⚖️ 210 кг</span></div><div class="price">48 500 ₽</div><button class="btn-outline" onclick="sendOrder('Свинья Ландрас')">Оставить заявку</button></div>
+        </div>
+        <!-- КУРЫ -->
+        <div class="animal-card">
+          <div class="card-img"><img src="https://www.bing.com/images/search?view=detailV2&ccid=%2fdjUWX%2fK&id=28B22F63E66086DA8952084FF90833946BA37EFD&thid=OIP._djUWX_K-Ro8ztHe4EJk0wHaGi&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.fdd8d4597fcaf91a3cced1dee04264d3%3frik%3d%252fX6ja5QzCPlPCA%26riu%3dhttp%253a%252f%252f1inkubator.ru%252fwp-content%252fuploads%252f2017%252f02%252fhajseks-braun.jpg%26ehk%3dz41tcnGf41tKh2fKu9yh%252bS5W7fqz%252b0e8DxD8uVlQTac%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=530&expw=600&q=%d0%9a%d1%83%d1%80%d1%8b+%d0%a5%d0%b0%d0%b9%d1%81%d0%b5%d0%ba%d1%81&FORM=IRPRST&ck=0625C7100CAAA603BE89D031E12D5FAD&selectedIndex=9&itb=0" alt="Куры"></div>
+          <div class="card-info"><h3>Куры Хайсекс</h3><div class="specs"><span>🐔 Хайсекс Браун</span><span>📅 5 мес</span><span>⚖️ 1.8 кг</span></div><div class="price">850 ₽</div><button class="btn-outline" onclick="sendOrder('Куры Хайсекс')">Оставить заявку</button></div>
+        </div>
+        <!-- ЦЫПЛЯТА -->
+        <div class="animal-card">
+          <div class="card-img"><img src="https://www.bing.com/images/search?view=detailV2&ccid=OwLVN9sS&id=7048F5BE459E9E505D43815AEAA0FD964742CD14&thid=OIP.OwLVN9sSYcNP1Bt1Jz945gHaE8&mediaurl=https%3a%2f%2fyaposad.ru%2fimages%2fwp-content%2fuploads%2f2022%2f11%2f2-kuritsa-hayseks-braun.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.3b02d537db1261c34fd41b75273f78e6%3frik%3dFM1CR5b9oOpagQ%26pid%3dImgRaw%26r%3d0&exph=580&expw=870&q=%d0%9a%d1%83%d1%80%d1%8b+%d0%a5%d0%b0%d0%b9%d1%81%d0%b5%d0%ba%d1%81&FORM=IRPRST&ck=A63B7B8DC55AA47CB4836CCAA839F6D6&selectedIndex=6&itb=0" alt="Цыплята"></div>
+          <div class="card-info"><h3>Цыплята суточные</h3><div class="specs"><span>🐥 Бройлер</span><span>📅 1 день</span><span>⚖️ 40 г</span></div><div class="price">120 ₽</div><button class="btn-outline" onclick="sendOrder('Цыплята бройлер')">Оставить заявку</button></div>
+        </div>
+        <!-- УТКИ -->
+        <div class="animal-card">
+          <div class="card-img"><img src="https://www.bing.com/images/search?view=detailV2&ccid=YS9FOFbm&id=57AD0ADAC6571FE5A9EE407EEFDBF9DBC2775CD3&thid=OIP.YS9FOFbmnJvO8L5FUxWVMAHaEO&mediaurl=https%3a%2f%2fkitaigid.ru%2fwp-content%2fuploads%2f2022%2f11%2fharakteristika-pekinskoy-utki.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.612f453856e69c9bcef0be4553159530%3frik%3d01x3wtv52%252b9%252bQA%26pid%3dImgRaw%26r%3d0&exph=400&expw=700&q=%d0%a3%d1%82%d0%ba%d0%b8+%d0%9f%d0%b5%d0%ba%d0%b8%d0%bd%d1%81%d0%ba%d0%b8%d0%b5&FORM=IRPRST&ck=CBB715615400C63CC4732228D31C4BDF&selectedIndex=14&itb=0" alt="Утки"></div>
+          <div class="card-info"><h3>Утки Пекинские</h3><div class="specs"><span>🦆 Пекинская</span><span>📅 3 мес</span><span>⚖️ 2.5 кг</span></div><div class="price">1 500 ₽</div><button class="btn-outline" onclick="sendOrder('Утки Пекинские')">Оставить заявку</button></div>
+        </div>
+        <!-- ГУСИ -->
+        <div class="animal-card">
+          <div class="card-img"><img src="https://www.bing.com/images/search?view=detailV2&ccid=GzWgdPzo&id=E9D0AC781A434EDD10512C7BBAA241DA2149CD7D&thid=OIP.GzWgdPzoZPue8nw1XO2lWQHaFj&mediaurl=https%3a%2f%2fpofoto.club%2fuploads%2fposts%2f2021-12%2f1640151716_1-pofoto-club-p-poroda-gusei-linda-foto-3.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.1b35a074fce864fb9ef27c355ceda559%3frik%3dfc1JIdpBorp7LA%26pid%3dImgRaw%26r%3d0&exph=1125&expw=1500&q=%d0%93%d1%83%d1%81%d0%b8+%d0%9b%d0%b8%d0%bd%d0%b4%d0%b0&FORM=IRPRST&ck=CF7E779CF433F240C25C7974B2324127&selectedIndex=2&itb=0" alt="Гуси"></div>
+          <div class="card-info"><h3>Гуси Линда</h3><div class="specs"><span>🪿 Линда</span><span>📅 4 мес</span><span>⚖️ 4.5 кг</span></div><div class="price">2 800 ₽</div><button class="btn-outline" onclick="sendOrder('Гуси Линда')">Оставить заявку</button></div>
+        </div>
+        <!-- ИНДЕЙКИ -->
+        <div class="animal-card">
+          <div class="card-img"><img src="https://www.bing.com/images/search?view=detailV2&ccid=HeYNn%2fq2&id=0B2A040A70BBEE7D949A657F4C03B4C1399D1FBB&thid=OIP.HeYNn_q2Di2AbO7c2AaxUQHaEn&mediaurl=https%3a%2f%2fagronomu.com%2fmedia%2fres%2f2%2f4%2f5%2f6%2f6%2f24566.oo350o.600.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.1de60d9ffab60e2d806ceedcd806b151%3frik%3dux%252bdOcG0A0x%252fZQ%26pid%3dImgRaw%26r%3d0&exph=374&expw=600&q=%d0%98%d0%bd%d0%b4%d0%b5%d0%b9%d0%ba%d0%b8+%d0%91%d1%80%d0%be%d0%bd%d0%b7%d0%be%d0%b2%d1%8b%d0%b5&FORM=IRPRST&ck=47D36BAAA383F0F1E80AF8A7A50C09D2&selectedIndex=19&itb=0" alt="Индейки"></div>
+          <div class="card-info"><h3>Индейки Бронзовые</h3><div class="specs"><span>🦃 Бронзовая</span><span>📅 5 мес</span><span>⚖️ 8 кг</span></div><div class="price">3 900 ₽</div><button class="btn-outline" onclick="sendOrder('Индейки Бронзовые')">Оставить заявку</button></div>
+        </div>
+        <!-- ПЕРЕПЕЛА -->
+        <div class="animal-card">
+          <div class="card-img"><img src="https://www.bing.com/images/search?view=detailV2&ccid=O04SyDdq&id=763529DF861D9DD86B2CA040FE0066AF070A7E05&thid=OIP.O04SyDdqBR2fHJc-mVjEDgHaE8&mediaurl=https%3a%2f%2fzoo-farm.ru%2fwp-content%2fuploads%2f2021%2f07%2fperepela-tehasskoj-porody-07.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.3b4e12c8376a051d9f1c973e9958c40e%3frik%3dBX4KB69mAP5AoA%26pid%3dImgRaw%26r%3d0&exph=440&expw=660&q=%d0%9f%d0%b5%d1%80%d0%b5%d0%bf%d0%b5%d0%bb%d0%b0+%d0%a2%d0%b5%d1%85%d0%b0%d1%81%d1%81%d0%ba%d0%b8%d0%b5&FORM=IRPRST&ck=6E11B6233C8AE8FEA4739B75799609FF&selectedIndex=2&itb=0" alt="Перепела"></div>
+          <div class="card-info"><h3>Перепела Техасские</h3><div class="specs"><span>🐣 Техасский</span><span>📅 2 мес</span><span>⚖️ 350 г</span></div><div class="price">380 ₽</div><button class="btn-outline" onclick="sendOrder('Перепела Техасские')">Оставить заявку</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="advantages">
+    <div class="container">
+      <h2>Наши преимущества</h2>
+      <div class="features-grid">
+        <div class="feature-item"><div class="feature-icon">🧬</div><h3>Собственное разведение</h3><p>Закрытый цикл</p></div>
+        <div class="feature-item"><div class="feature-icon">📄</div><h3>Вет. документы</h3><p>Полный пакет</p></div>
+        <div class="feature-item"><div class="feature-icon">💉</div><h3>Вакцинация</h3><p>По графику</p></div>
+        <div class="feature-item"><div class="feature-icon">🛡️</div><h3>Гарантия здоровья</h3><p>30 дней</p></div>
+        <div class="feature-item"><div class="feature-icon">🚛</div><h3>Доставка</h3><p>По РФ и СНГ</p></div>
+        <div class="feature-item"><div class="feature-icon">📞</div><h3>Консультации</h3><p>24/7 поддержка</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f8f6f0;">
+    <div class="container">
+      <h2>Галерея хозяйства</h2>
+      <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:25px;">
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=gkClj%2bjd&id=E4928386A27ECFDD1A8BFD8089EF656D3D583343&thid=OIP.gkClj-jdxSUvLJJ_wsI3vQHaEK&mediaurl=https%3a%2f%2fpic.rutubelist.ru%2fvideo%2ff1%2fe5%2ff1e59e8c74bb87df6cca406419e410d1.jpg%3fsize%3dl&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8240a58fe8ddc5252f2c927fc2c237bd%3frik%3dQzNYPW1l74mA%252fQ%26pid%3dImgRaw%26r%3d0&exph=360&expw=640&q=%d0%b4%d0%be%d0%bc+%d1%84%d0%b5%d1%80%d0%bc%d0%b5%d1%80%d0%b0+%d0%bc%d0%b0%d0%b9%d0%bd%d0%ba%d1%80%d0%b0%d1%84%d1%82&FORM=IRPRST&ck=82C41A6E61F5DA5EDAA572458ED69E1A&selectedIndex=3&itb=0" style="width:calc(33% - 12px); border-radius:20px; min-width:200px; flex:1;" loading="lazy" alt="Ферма 1">
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=z7SNG9H9&id=D7BDAC2660535B5A4BE3914632A6BBC99828830C&thid=OIP.z7SNG9H9W1X_f46fuwR0DQHaE8&mediaurl=https%3a%2f%2fagrosnab18.ru%2fuploads%2fs%2f0%2fu%2fl%2f0uljcn2qwco5%2fimg%2ffull_EJuux1we.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.cfb48d1bd1fd5b55ff7f8e9fbb04740d%3frik%3dDIMomMm7pjJGkQ%26pid%3dImgRaw%26r%3d0&exph=1000&expw=1500&q=%d1%84%d0%b5%d1%80%d0%bc%d0%b0+%d0%b2+%d0%b6%d1%82%d1%85%d0%bd%d0%b8&FORM=IRPRST&ck=220C2054CB4341A4D01FCECDC4ED7F72&selectedIndex=8&itb=0" style="width:calc(33% - 12px); border-radius:20px; min-width:200px; flex:1;" loading="lazy" alt="Ферма 2">
+        <img src="https://www.bing.com/images/search?view=detailV2&ccid=%2fPXebeGS&id=9C170189081EE2928EB77A3EE067BA13120CB7E8&thid=OIP._PXebeGSlQXDeMCLzxGe5AHaEJ&mediaurl=https%3a%2f%2fimg.freepik.com%2fpremium-photo%2fagricultural-farm-with-fields-tractors-and-machinery-for-food-production-agricultural-landscape-generative-ai_853928-1034.jpg%3fw%3d2000&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.fcf5de6de1929505c378c08bcf119ee4%3frik%3d6LcMEhO6Z%252bA%252beg%26pid%3dImgRaw%26r%3d0&exph=1121&expw=2000&q=%d1%84%d0%b5%d1%80%d0%bc%d0%b0+%d0%b2+%d0%b6%d1%82%d1%85%d0%bd%d0%b8&FORM=IRPRST&ck=5A824A4D1F68A3205D834750C913B1F5&selectedIndex=6&itb=0" style="width:calc(33% - 12px); border-radius:20px; min-width:200px; flex:1;" loading="lazy" alt="Ферма 3">
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <h2>Отзывы клиентов</h2>
+      <div class="reviews">
+        <div class="review-card">⭐⭐⭐⭐⭐<p>"Приобрёл трёх тёлок, доставка за 2 дня. Очень доволен!"</p><strong>-- Алексей, Краснодар</strong></div>
+        <div class="review-card">⭐⭐⭐⭐⭐<p>"Куры несушки отличные, уже несутся. Рекомендую."</p><strong>-- Марина, Воронеж</strong></div>
+        <div class="review-card">⭐⭐⭐⭐⭐<p>"Поросята здоровые, консультация помогла."</p><strong> Иван, Ростов</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Этапы покупки</h2>
+      <div class="steps">
+        <div class="step"><div class="step-number">1</div><h4>Выбор</h4><p>По фото/видео/в живую</p></div>
+        <div class="step"><div class="step-number">2</div><h4>Консультация</h4><p>Обсуждение</p></div>
+        <div class="step"><div class="step-number">3</div><h4>Договор</h4><p>Официальный</p></div>
+        <div class="step"><div class="step-number">4</div><h4>Оплата</h4><p>Безопасная</p></div>
+        <div class="step"><div class="step-number">5</div><h4>Доставка</h4><p>Спецтранспорт</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fcfaf5;">
+    <div class="container">
+      <h2>Частые вопросы</h2>
+      <div style="max-width:700px; margin-top:25px;">
+        <p><strong>🚚 Доставка?</strong> Да, по всей Беларуси и СНГ.</p>
+        <p><strong>📑 Документы?</strong> Вет. свидетельство, сертификат, договор.</p>
+        <p><strong>🛡️ Гарантии?</strong> 30 дней на здоровье.</p>
+        <p><strong>🏡 Можно приехать?</strong> Да, организуем визит.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Контакты</h2>
+      <div class="contact-wrapper">
+        <div class="contact-details">
+          <p><strong>📞 Телефон:</strong> <a href="tel:+375293036207">+375-29-303-62-07</a></p>
+          <p><strong>✉️ Email:</strong> <a href="viber://chat?number=+375293036207">💬 Написать в Viber</a></p>
+          <p><strong>💬 Telegram:</strong> <a href="tg://resolve?domain=PepperHe"></a>✈️ Написать в Telegram</p>
+          <img src="https://tse2.mm.bing.net/th/id/OIP.fs91NJY3je6JLs8-rFJlxwHaGj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Карта" class="map-img" style="margin-top:20px;">
+        </div>
+        <div>
+          <h3 style="margin-bottom:16px;">Отправить заявку</h3>
+          <form onsubmit="event.preventDefault(); sendOrder('Заявка с формы'); this.reset();">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Телефон" required>
+            <textarea rows="3" placeholder="Какое животное интересует?"></textarea>
+            <button type="submit" class="btn btn-gold" style="width:100%;">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Ферма «Золотой луг». Племенной скот и птица.</p>
+      <p style="margin-top:8px; font-size:0.9rem;">Цыплята • Утки • Гуси • Индейки • Перепела • Коровы • Свиньи</p>
+    </div>
+  </footer>
+
+  <script>
+    function sendOrder(name) {
+      alert('✅ Заявка на «' + name + '» принята! Мы свяжемся с вами в ближайшее время.');
+    }
+  </script>
+</body>
+</html>
