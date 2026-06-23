@@ -1,344 +1,167 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>Ферма «Золотой луг» | Племенной скот и птица</title>
-  
-  <!-- SEO мета-теги -->
-  <meta name="description" content="Племенные коровы, телята, свиньи, поросята, куры, утки и цыплята напрямую с фермы. Ветеринарный контроль, доставка по всей стране. Здоровый скот и птица.">
-  <meta name="keywords" content="купить корову, телята, поросята, свиньи, цыплята, утки, фермерское хозяйство, племенной скот, живая птица, доставка скота">
-  <meta name="author" content="Ферма Золотой луг">
-  
-  <!-- Подключение внешнего CSS-файла -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ферма Золотой луг | Племенной скот и птица</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Главный экран / Hero -->
-  <div class="hero">
-    <div class="container" style="width:100%;">
-      <div class="navbar">
-        <a href="#" class="logo">🌾 Золотой<span>Луг</span></a>
-        <div class="nav-links">
-          <a href="#about">О ферме</a>
-          <a href="#catalog">Каталог</a>
-          <a href="#advantages">Преимущества</a>
-          <a href="#reviews">Отзывы</a>
-          <a href="#contact">Контакты</a>
-          <button class="admin-panel-trigger" onclick="adminAddAnimal()" title="Добавить животное (демо админ)">➕ Админ</button>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">🌾 Золотой<span>Луг</span></a>
+            <nav class="nav">
+                <a href="#about">О ферме</a>
+                <a href="#catalog">Каталог</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </nav>
         </div>
-      </div>
-      <div class="hero-content">
-        <h1>Племенной скот и домашняя птица напрямую от фермы</h1>
-        <p>Здоровые животные, ветеринарный контроль, доставка по всей стране.</p>
-        <div class="hero-buttons">
-          <a href="#catalog" class="btn btn-gold">Посмотреть каталог</a>
-          <a href="#contact" class="btn btn-light">Связаться с нами</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    </header>
 
-  <!-- О ферме -->
-  <section id="about">
-    <div class="container">
-      <h2>О ферме</h2>
-      <div class="about-grid">
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=2070&auto=format&fit=crop" alt="Ферма Золотой луг" loading="lazy">
-        </div>
-        <div>
-          <p style="font-size:1.1rem; margin-bottom:20px;">Семейное хозяйство «Золотой луг» работает с 2008 года. Мы выращиваем племенной скот и птицу на 350 гектарах экологически чистых пастбищ. Более 1200 голов КРС, 800 свиней и 5000 птиц ежегодно.</p>
-          <div class="stats">
-            <div class="stat"><span class="stat-number">16</span><br>лет опыта</div>
-            <div class="stat"><span class="stat-number">350</span><br>гектаров</div>
-            <div class="stat"><span class="stat-number">2000+</span><br>голов скота</div>
-          </div>
-          <p>✔ Ветеринарное сопровождение 24/7<br>✔ Собственная кормовая база<br>✔ Племенные свидетельства</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Каталог животных -->
-  <section id="catalog" style="background:#fdfcf9;">
-    <div class="container">
-      <h2>Каталог животных</h2>
-      <p id="stockUpdate" style="color:#6b7c6f; margin-bottom:20px;">🔄 Обновлено: сегодня</p>
-      <div class="catalog-tabs">
-        <button class="tab-btn active">Все</button>
-        <button class="tab-btn">Коровы</button>
-        <button class="tab-btn">Телята</button>
-        <button class="tab-btn">Свиньи</button>
-        <button class="tab-btn">Поросята</button>
-        <button class="tab-btn">Куры</button>
-        <button class="tab-btn">Цыплята</button>
-        <button class="tab-btn">Утки</button>
-      </div>
-      <div class="catalog-grid" id="catalogGrid">
-        <!-- Карточка 1: Корова -->
-        <div class="animal-card">
-          <div class="card-img"><img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?q=80&w=500&auto=format&fit=crop" alt="Корова Голштинская"></div>
-          <div class="card-info">
-            <h3>Корова Голштинская</h3>
-            <div class="specs">
-              <span>🐄 Порода: Голштин</span>
-              <span>📅 3 года</span>
-              <span>⚖️ 620 кг</span>
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container">
+            <h1>Племенной скот и домашняя птица<br>напрямую от фермы</h1>
+            <p>Здоровые животные, ветеринарный контроль, доставка по всей стране.</p>
+            <div class="hero-buttons">
+                <a href="#catalog" class="btn btn-gold">Посмотреть каталог</a>
+                <a href="#contact" class="btn btn-white">Связаться с нами</a>
             </div>
-            <div class="price">185 000 ₽</div>
-            <button class="btn btn-outline" onclick="sendToTelegram({animal:'Корова Голштинская'})">Оставить заявку</button>
-          </div>
         </div>
-        
-        <!-- Карточка 2: Теленок -->
-        <div class="animal-card">
-          <div class="card-img"><img src="https://images.unsplash.com/photo-1605282375375-9f5d16c9f14b?q=80&w=500&auto=format&fit=crop" alt="Теленок Абердин"></div>
-          <div class="card-info">
-            <h3>Теленок Абердин</h3>
-            <div class="specs">
-              <span>🐄 Порода: Абердин-ангус</span>
-              <span>📅 5 мес</span>
-              <span>⚖️ 180 кг</span>
+    </section>
+
+    <!-- О ферме -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">О ферме</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?w=600" alt="Ферма">
+                </div>
+                <div class="about-text">
+                    <p>Семейное хозяйство «Золотой луг» работает с 2008 года на 350 гектарах экологически чистых пастбищ.</p>
+                    <div class="stats">
+                        <div class="stat"><span class="stat-num">16</span> лет опыта</div>
+                        <div class="stat"><span class="stat-num">350</span> гектаров</div>
+                        <div class="stat"><span class="stat-num">2000+</span> голов скота</div>
+                    </div>
+                    <p>✅ Ветеринарное сопровождение 24/7<br>✅ Собственная кормовая база<br>✅ Племенные свидетельства</p>
+                </div>
             </div>
-            <div class="price">72 000 ₽</div>
-            <button class="btn btn-outline" onclick="sendToTelegram({animal:'Теленок Абердин'})">Оставить заявку</button>
-          </div>
         </div>
-        
-        <!-- Карточка 3: Свинья -->
-        <div class="animal-card">
-          <div class="card-img"><img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=500&auto=format&fit=crop" alt="Свинья Ландрас"></div>
-          <div class="card-info">
-            <h3>Свинья Ландрас</h3>
-            <div class="specs">
-              <span>🐖 Порода: Ландрас</span>
-              <span>📅 1.5 года</span>
-              <span>⚖️ 210 кг</span>
+    </section>
+
+    <!-- Каталог -->
+    <section id="catalog" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Каталог животных</h2>
+            <div class="catalog-grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=400" alt="Корова">
+                    <div class="card-body">
+                        <h3>Корова Голштинская</h3>
+                        <p>🐄 Порода: Голштин | 📅 3 года | ⚖️ 620 кг</p>
+                        <p class="price">185 000 ₽</p>
+                        <button class="btn btn-outline" onclick="sendOrder('Корова Голштинская')">Оставить заявку</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1605282375375-9f5d16c9f14b?w=400" alt="Теленок">
+                    <div class="card-body">
+                        <h3>Теленок Абердин</h3>
+                        <p>🐄 Порода: Абердин | 📅 5 мес | ⚖️ 180 кг</p>
+                        <p class="price">72 000 ₽</p>
+                        <button class="btn btn-outline" onclick="sendOrder('Теленок Абердин')">Оставить заявку</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=400" alt="Свинья">
+                    <div class="card-body">
+                        <h3>Свинья Ландрас</h3>
+                        <p>🐖 Порода: Ландрас | 📅 1.5 года | ⚖️ 210 кг</p>
+                        <p class="price">48 500 ₽</p>
+                        <button class="btn btn-outline" onclick="sendOrder('Свинья Ландрас')">Оставить заявку</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1598188306155-25e400eb5078?w=400" alt="Куры">
+                    <div class="card-body">
+                        <h3>Куры Хайсекс</h3>
+                        <p>🐔 Порода: Хайсекс | 📅 5 мес | ⚖️ 1.8 кг</p>
+                        <p class="price">850 ₽</p>
+                        <button class="btn btn-outline" onclick="sendOrder('Куры Хайсекс')">Оставить заявку</button>
+                    </div>
+                </div>
             </div>
-            <div class="price">48 500 ₽</div>
-            <button class="btn btn-outline" onclick="sendToTelegram({animal:'Свинья Ландрас'})">Оставить заявку</button>
-          </div>
         </div>
-        
-        <!-- Карточка 4: Куры -->
-        <div class="animal-card">
-          <div class="card-img"><img src="https://images.unsplash.com/photo-1598188306155-25e400eb5078?q=80&w=500&auto=format&fit=crop" alt="Куры Хайсекс"></div>
-          <div class="card-info">
-            <h3>Куры Хайсекс</h3>
-            <div class="specs">
-              <span>🐔 Порода: Хайсекс Браун</span>
-              <span>📅 5 мес</span>
-              <span>⚖️ 1.8 кг</span>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="advantages" class="section">
+        <div class="container">
+            <h2 class="section-title">Наши преимущества</h2>
+            <div class="features">
+                <div class="feature">🧬<h3>Собственное разведение</h3><p>Закрытый цикл</p></div>
+                <div class="feature">📄<h3>Вет. документы</h3><p>Полный пакет</p></div>
+                <div class="feature">💉<h3>Вакцинация</h3><p>По графику</p></div>
+                <div class="feature">🛡️<h3>Гарантия здоровья</h3><p>30 дней</p></div>
+                <div class="feature">🚛<h3>Доставка</h3><p>По всей РФ</p></div>
+                <div class="feature">📞<h3>Консультации</h3><p>24/7 поддержка</p></div>
             </div>
-            <div class="price">850 ₽</div>
-            <button class="btn btn-outline" onclick="sendToTelegram({animal:'Куры Хайсекс'})">Оставить заявку</button>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Наши преимущества -->
-  <section id="advantages">
-    <div class="container">
-      <h2>Наши преимущества</h2>
-      <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-icon">🧬</div>
-          <h3>Собственное разведение</h3>
-          <p>Закрытый цикл, племенные родители.</p>
+    <!-- Отзывы -->
+    <section id="reviews" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <div class="reviews-grid">
+                <div class="review">⭐⭐⭐⭐⭐<p>«Отличные тёлки, доставка за 2 дня!»</p><strong>— Алексей, Краснодар</strong></div>
+                <div class="review">⭐⭐⭐⭐⭐<p>«Куры несутся каждый день. Спасибо!»</p><strong>— Марина, Воронеж</strong></div>
+                <div class="review">⭐⭐⭐⭐⭐<p>«Поросята здоровые, рекомендую.»</p><strong>— Иван, Ростов</strong></div>
+            </div>
         </div>
-        <div class="feature-item">
-          <div class="feature-icon">📄</div>
-          <h3>Вет. документы</h3>
-          <p>Полный пакет свидетельств.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">💉</div>
-          <h3>Вакцинация</h3>
-          <p>Все животные привиты по графику.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🛡️</div>
-          <h3>Гарантия здоровья</h3>
-          <p>Юридическая гарантия 30 дней.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🚛</div>
-          <h3>Доставка</h3>
-          <p>По РФ и СНГ спецтранспортом.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">📞</div>
-          <h3>Консультации</h3>
-          <p>Поддержка по содержанию 24/7.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Галерея -->
-  <section style="background:#f8f6f0;">
-    <div class="container">
-      <h2>Галерея хозяйства</h2>
-      <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:25px;">
-        <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=400&auto=format&fit=crop" style="width:calc(33.333% - 12px); border-radius:20px; object-fit:cover;" loading="lazy" alt="Фото фермы 1">
-        <img src="https://images.unsplash.com/photo-1605000929038-3b0fbd09b9e4?q=80&w=400&auto=format&fit=crop" style="width:calc(33.333% - 12px); border-radius:20px; object-fit:cover;" loading="lazy" alt="Фото фермы 2">
-        <img src="https://images.unsplash.com/photo-1576014131795-440716a1bb9a?q=80&w=400&auto=format&fit=crop" style="width:calc(33.333% - 12px); border-radius:20px; object-fit:cover;" loading="lazy" alt="Фото фермы 3">
-      </div>
-    </div>
-  </section>
+    <!-- Контакты -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>📞 <a href="tel:+79161234567">+7 (916) 123-45-67</a></p>
+                    <p>✉️ <a href="mailto:info@zolotoylug.ru">info@zolotoylug.ru</a></p>
+                    <p>💬 Telegram/WhatsApp: @zolotoylug</p>
+                </div>
+                <form class="contact-form" onsubmit="handleForm(event)">
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                    <input type="tel" id="phone" placeholder="Телефон" required>
+                    <textarea id="message" placeholder="Какое животное интересует?"></textarea>
+                    <button type="submit" class="btn btn-gold">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-  <!-- Отзывы -->
-  <section id="reviews">
-    <div class="container">
-      <h2>Отзывы клиентов</h2>
-      <div class="reviews">
-        <div class="review-card">
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>«Приобрёл трёх тёлок, все с документами. Доставка за 2 дня. Очень доволен!»</p>
-          <strong>— Алексей, Краснодар</strong>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Ферма «Золотой луг». Все права защищены.</p>
         </div>
-        <div class="review-card">
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>«Куры несушки отличные, уже несутся. Рекомендую ферму.»</p>
-          <strong>— Марина, Воронеж</strong>
-        </div>
-        <div class="review-card">
-          <p>⭐⭐⭐⭐⭐</p>
-          <p>«Поросята здоровые, консультация по кормлению помогла.»</p>
-          <strong>— Иван, Ростов</strong>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Этапы покупки -->
-  <section>
-    <div class="container">
-      <h2>Этапы покупки</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h4>Выбор животного</h4>
-          <p>По фото/видео или лично на ферме.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h4>Консультация</h4>
-          <p>Обсуждаем породы и условия содержания.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h4>Договор</h4>
-          <p>Заключаем официальный договор купли-продажи.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">4</div>
-          <h4>Оплата</h4>
-          <p>Безопасный платёж удобным способом.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">5</div>
-          <h4>Доставка</h4>
-          <p>Спецтранспорт доставит животных к вам.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Частые вопросы -->
-  <section style="background:#fcfaf5;">
-    <div class="container">
-      <h2>Частые вопросы</h2>
-      <div style="max-width:700px; margin-top:25px;">
-        <p><strong>🚚 Есть ли доставка?</strong> Да, доставляем по всей России и в страны СНГ.</p>
-        <p><strong>📑 Какие документы?</strong> Ветеринарное свидетельство, племенной сертификат, договор.</p>
-        <p><strong>🛡️ Гарантии?</strong> 30 дней гарантии на здоровье животных.</p>
-        <p><strong>🏡 Можно приехать?</strong> Конечно, организуем визит на ферму.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Контакты -->
-  <section id="contact">
-    <div class="container">
-      <h2>Контакты</h2>
-      <div class="contact-wrapper">
-        <div class="contact-details">
-          <p><strong>📞 Телефон:</strong> <a href="tel:+79161234567">+7 (916) 123-45-67</a></p>
-          <p><strong>✉️ Email:</strong> <a href="mailto:info@zolotoylug.ru">info@zolotoylug.ru</a></p>
-          <p><strong>💬 Telegram / WhatsApp:</strong> <a href="#">@zolotoylug_bot</a></p>
-          <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=600&auto=format&fit=crop" alt="Карта проезда к ферме" class="map-img" style="margin-top:20px;">
-        </div>
-        <div>
-          <h3 style="margin-bottom:16px;">Отправить заявку</h3>
-          <form onsubmit="event.preventDefault(); sendToTelegram({name: document.getElementById('name').value, phone: document.getElementById('phone').value});">
-            <input type="text" id="name" placeholder="Ваше имя" required>
-            <input type="tel" id="phone" placeholder="Телефон" required>
-            <textarea rows="3" placeholder="Интересующее животное"></textarea>
-            <button type="submit" class="btn btn-gold" style="width:100%;">Отправить</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Подвал -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Ферма «Золотой луг». Племенной скот и птица. Все права защищены.</p>
-      <p style="margin-top:8px; font-size:0.9rem;">SEO-оптимизированный сайт. Быстрая загрузка. Интеграция с Telegram.</p>
-    </div>
-  </footer>
-
-  <!-- JavaScript для функциональности -->
-  <script>
-    // Имитация отправки в Telegram и CRM
-    function sendToTelegram(data) {
-      console.log('📨 Заявка отправлена в Telegram бот:', data);
-      alert('Спасибо! Ваша заявка получена. Мы свяжемся с вами в WhatsApp / Telegram в ближайшее время.');
-    }
-    
-    // Простая панель администратора (демо-режим)
-    function adminAddAnimal() {
-      let name = prompt('Название животного (например, Тёлка Айршир)');
-      if(!name) return;
-      let breed = prompt('Порода');
-      let age = prompt('Возраст');
-      let weight = prompt('Вес (кг)');
-      let price = prompt('Цена (руб)');
-      let img = prompt('URL фото (оставьте пустым для заглушки)') || 'https://placehold.co/600x400/1e3b2f/ffffff?text=Новый+скот';
-      let grid = document.getElementById('catalogGrid');
-      if(!grid) return;
-      
-      let card = document.createElement('div');
-      card.className = 'animal-card';
-      card.innerHTML = `
-        <div class="card-img"><img src="${img}" alt="${name}" loading="lazy"></div>
-        <div class="card-info">
-          <h3>${name}</h3>
-          <div class="specs">
-            <span>🐄 Порода: ${breed}</span>
-            <span>📅 Возраст: ${age}</span>
-            <span>⚖️ Вес: ${weight} кг</span>
-          </div>
-          <div class="price">${price} ₽</div>
-          <button class="btn btn-outline" onclick="sendToTelegram({animal:'${name}', price:'${price}'})">Оставить заявку</button>
-        </div>
-      `;
-      grid.appendChild(card);
-      alert('Животное добавлено на сайт (демо). В реальной админке сохраняется в базу.');
-    }
-    
-    // Автообновление "наличия" (демо)
-    window.onload = function() {
-      setInterval(() => {
-        let el = document.getElementById('stockUpdate');
-        if(el) el.innerText = 'Обновлено: только что (' + new Date().toLocaleTimeString() + ')';
-      }, 30000);
-    };
-  </script>
+    <script>
+        function sendOrder(animal) {
+            alert('✅ Заявка на "' + animal + '" принята! Мы свяжемся с вами в ближайшее время.');
+        }
+        function handleForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            alert('✅ Спасибо, ' + name + '! Ваша заявка отправлена. Ждите звонка.');
+            event.target.reset();
+        }
+    </script>
 </body>
 </html>
